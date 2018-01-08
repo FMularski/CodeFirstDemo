@@ -10,6 +10,16 @@ namespace CodeFirstDemo
     {
         static void Main(string[] args)
         {
+            var context = new WorkersDbContext();
+
+            context.Workers.Add(new Worker
+            {
+                FirstName = "Filip",
+                LastName = "Mularski",
+                PasscardNumber = "012Q-FM"
+            });
+            context.SaveChanges();
+            
         }
     }
 }
